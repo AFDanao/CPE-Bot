@@ -1,0 +1,17 @@
+{
+  "name": "cpe",
+  "version": "1.0.0",
+  "description": "A discord bot solely for the SCPES Community",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gussi",
+  "license": "MIT",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^14.13.0",
+    "glob": "^10.3.4",
+    "mongoose": "^7.5.1"
+  }
+}
