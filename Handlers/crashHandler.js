@@ -57,11 +57,11 @@ module.exports = (client) => {
   });
 
   process.on("multipleResolves", (type, promise, reason) => {
-    if (
-      reason.toLocateString() ===
-      "Error: Cannot perform IP discovery - socket closed"
-    )
-      return;
+    // if (
+    //   reason.toLocateString() ===
+    //   "Error: Cannot perform IP discovery - socket closed"
+    // )
+    //   return;
     const multipleResolvesEmbed = new EmbedBuilder()
       .setTitle("**🔴 Multiple Resolves 🔴**")
       .setURL("https://nodejs.org/api/process.html#event-multipleresolves")
