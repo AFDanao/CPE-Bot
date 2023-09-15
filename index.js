@@ -15,6 +15,5 @@ client.guildConfig = new Collection();
 
 const { loadEvents } = require("./Handlers/eventHandler");
 loadEvents(client);
-require("./Handlers/crashHandler")(client);
 
 client.login(client.config.Token);
