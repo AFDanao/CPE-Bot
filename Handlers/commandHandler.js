@@ -24,9 +24,9 @@ async function loadCommands(client) {
 
       commandsArray.push(command.data.toJSON());
 
-      commands.push({ Command: command.data.name, Status: "🟩" });
+      commands.push({ Command: command.data.name, Status: "Success" });
     } catch (error) {
-      commands.push({ Command: file.split("/").pop().slice(0, -3), Status: "🟥" });
+      commands.push({ Command: file.split("/").pop().slice(0, -3), Status: "Failed" });
     }
   });
   client.application.commands.set(commandsArray);

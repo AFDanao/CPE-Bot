@@ -17,9 +17,9 @@ async function loadEvents(client) {
       target[event.once ? "once" : "on"](event.name, execute);
       client.events.set(event.name, execute);
       
-      events.push({ Event: event.name, Status: "🟩"})
+      events.push({ Event: event.name, Status: "Success"})
     } catch (error) {
-      events.push({ Event: file.split("/").pop().slice(0, -3), Status: "🟥"})
+      events.push({ Event: file.split("/").pop().slice(0, -3), Status: "Failed"})
     }
   }
 
