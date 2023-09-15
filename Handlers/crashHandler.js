@@ -12,7 +12,7 @@ module.exports = (client) => {
     const ErrorEmbed = new EmbedBuilder()
       .setTitle("Error")
       .setURL("https://discordjs.guide/popular-topics/errors.html#api-errors")
-      .setColor("RED")
+      .setColor("Red")
       .setDescription(inspect(err, { depth: 0 }))
       .setTimestamp();
     return s.send({
@@ -24,7 +24,7 @@ module.exports = (client) => {
     const unhandledRejectionEmbed = new EmbedBuilder()
       .setTitle("**🔴 Unhandled Rejection/Catch 🔴**")
       .setURL("https://nodejs.org/api/process.html#event-unhandledrejection")
-      .setColor("RED")
+      .setColor("Red")
       .addFields(
         {
           name: "Reason",
@@ -41,7 +41,7 @@ module.exports = (client) => {
   process.on("uncaughtException", (err, origin) => {
     const uncaughtExceptionEmbed = new EmbedBuilder()
       .setTitle("**🔴 Uncaught Exception/Crash 🔴**")
-      .setColor("RED")
+      .setColor("Red")
       .setURL("https://nodejs.org/api/process.html#event-uncaughtexception")
       .addFields(
         { name: "Error", value: inspect(err, { depth: 0 }).substring(0, 1000) },
@@ -65,7 +65,7 @@ module.exports = (client) => {
     const multipleResolvesEmbed = new EmbedBuilder()
       .setTitle("**🔴 Multiple Resolves 🔴**")
       .setURL("https://nodejs.org/api/process.html#event-multipleresolves")
-      .setColor("RED")
+      .setColor("Red")
       .addFields(
         { name: "Type", value: inspect(type, { depth: 0 }).substring(0, 1000) },
         {
@@ -86,7 +86,7 @@ module.exports = (client) => {
   process.on("warning", (warn) => {
     const warningEmbed = new EmbedBuilder()
       .setTitle("**🔴 Warning 🔴**")
-      .setColor("RED")
+      .setColor("Red")
       .setURL("https://nodejs.org/api/process.html#event-warning")
       .addFields({
         name: "Warn",
